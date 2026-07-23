@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Iniciar Sesión | Pasquel Hermanos</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Script oficial de Google Identity Services -->
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<style>
+body,h1,h2,h3 {font-family: "Raleway", sans-serif}
+body, html {
+  height: 100%;
+  background-color: #f1f1f1;
+}
+.auth-card {
+  max-width: 420px;
+  margin: 100px auto;
+  padding: 32px;
+  background: white;
+  border-radius: 8px;
+}
+</style>
+</head>
+<body>
+
+<div class="w3-container">
+  <div class="w3-card-4 auth-card">
+    
+    <p><a href="index.html" class="w3-button w3-small w3-light-grey"><i class="fa fa-arrow-left"></i> Volver al sitio</a></p>
+    
+    <h3 class="w3-center" style="margin-bottom: 24px; font-weight: bold;">Iniciar Sesión</h3>
+    
+    <!-- Botón oficial de Google -->
+    <div style="display: flex; justify-content: center; margin-bottom: 20px;">
+      <div id="g_id_onload"
+           data-client_id="695642488122-lhuaqt8v7qdi8f5cebbr0mf6c87b281o.apps.googleusercontent.com"
+           data-callback="handleCredentialResponse"
+           data-auto_prompt="false">
+      </div>
+      <div class="g_id_signin"
+           data-type="standard"
+           data-shape="rectangular"
+           data-theme="outline"
+           data-text="signin_with"
+           data-size="large"
+           data-logo_alignment="left">
+      </div>
+    </div>
+    
+    <p class="w3-center w3-text-grey" style="font-size: 14px; margin: 20px 0;">o con tu correo directo</p>
+
+    <form id="form-login">
+      <p><input class="w3-input w3-border" type="email" id="login-email" placeholder="Correo electrónico" required></p>
+      <p><input class="w3-input w3-border" type="password" id="login-password" placeholder="Contraseña" required></p>
+      <p><button class="w3-button w3-black w3-block" type="submit" style="margin-top: 16px;">Entrar</button></p>
+    </form>
+
+    <p class="w3-center" style="margin-top: 24px; font-size: 14px;">
+      ¿No tienes una cuenta? <a href="register.html" style="color: black; font-weight: bold;">Regístrate aquí</a>
+    </p>
+
+  </div>
+</div>
+
+<script>
+// Función que maneja la respuesta segura de Google cuando el usuario se loguea
+function handleCredentialResponse(response) {
+  fetch('http://localhost:3000/api/admin/google-login', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ token: response.credential })
+  })
+  .then(res => res.json())
+  .then(data => {
+    if (data.success) {
+      localStorage.setItem("usuario_sesion", JSON.stringify(data.user));
+      alert(`¡Bienvenido, ${data.user.email}!`);
+      window.location.href = "index.html";
+    } else {
+      alert("Error de autenticación con Google: " + data.message);
+    }
+  })
+  .catch(err => {
+    console.error("Error de conexión:", err);
+    alert("No se pudo conectar con el servidor.");
+  });
+}
+// Login tradicional por correo directo
+document.getElementById("form-login").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const email = document.getElementById("login-email").value;
+  
+  if (email.endsWith("@pasquelhermanos.com.mx")) {
+    alert("¡Bienvenido, Administrador!");
+    localStorage.setItem("usuario_sesion", JSON.stringify({ email: email, rol: "admin" }));
+  } else {
+    alert("Sesión iniciada con éxito.");
+    localStorage.setItem("usuario_sesion", JSON.stringify({ email: email, rol: "user" }));
+  }
+  window.location.href = "index.html";
+});
+</script>
+
+</body>
+</html>

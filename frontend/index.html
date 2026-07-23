@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pasquel Hermanos | Agencia Aduanal</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+header.bgimg-1 {
+  height: 100vh;
+}
+
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("5.png");
+  min-height: 100%;
+  position: relative;
+}
+
+.bgimg-1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.45);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+</style>
+</head>
+<body>
+
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide">
+      <img src="pasquel.png" alt="Logo" style="height: 30px;">
+    </a>
+    <div class="w3-right w3-hide-small" id="nav-menu-dinamico">
+      <a href="#about" class="w3-bar-item w3-button">ACERCA DE</a>
+      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> EQUIPO</a>
+      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> HISTORIA</a>
+      <a href="#vacantes" class="w3-bar-item w3-button"><i class="fa fa-briefcase"></i> BOLSA DE TRABAJO</a>
+      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACTO</a>
+      <!-- Botón dinámico de acceso -->
+      <a href="login.html" id="btn-auth-nav" class="w3-bar-item w3-button" style="background-color: #000; color: #fff;"><i class="fa fa-sign-in"></i> ACCESO</a>
+    </div>
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ACERCA DE</a>
+  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">EQUIPO</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">HISTORIA</a>
+  <a href="#vacantes" onclick="w3_close()" class="w3-bar-item w3-button">BOLSA DE TRABAJO</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACTO</a>
+  <a href="login.html" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-sign-in"></i> ACCESO / LOGIN</a>
+</nav>
+
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-middle w3-text-white w3-center hero-content" style="padding:48px; width: 100%;">
+    <h1 class="w3-jumbo" style="font-weight: bold; letter-spacing: 3px; text-shadow: 2px 2px 8px rgba(0,0,0,0.9); margin-bottom: 0;">PASQUEL HERMANOS</h1>
+    <p class="w3-xxlarge" style="letter-spacing: 2px; text-shadow: 2px 2px 6px rgba(0,0,0,0.9); margin-top: 10px;">Agencia Aduanal • Fundada en 1908</p>
+    <p><a href="#vacantes" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Ver Bolsa de Trabajo</a></p>
+  </div> 
+  <div class="w3-display-bottomleft w3-text-white w3-large" style="padding:24px 48px; z-index: 2;">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</header>
+
+<div class="w3-container" style="padding:128px 16px" id="about">
+  <h3 class="w3-center">ACERCA DE PASQUEL HERMANOS</h3>
+  <p class="w3-center w3-large">Tradición, experiencia y liderazgo en comercio exterior</p>
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-quarter">
+      <i class="fa fa-history w3-margin-bottom w3-jumbo w3-center"></i>
+      <p class="w3-large">Legado y Trayectoria</p>
+      <p>Fundada en 1908, respaldamos más de un siglo de experiencia facilitando operaciones aduanales con total seguridad y cumplimiento.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-shield w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Confianza y Seguridad</p>
+      <p>Garantizamos procesos legales y eficientes en cada despacho aduanal para proteger el patrimonio y la cadena de suministro de nuestros clientes.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-globe w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Cobertura Integral</p>
+      <p>Ofrecemos soluciones logísticas globales que conectan de manera óptima el transporte terrestre, aéreo y marítimo internacional.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-users w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Atención Personalizada</p>
+      <p>Contamos con ejecutivos altamente especializados en asesoría de comercio exterior enfocados en el crecimiento de tu empresa.</p>
+    </div>
+  </div>
+</div>
+
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="work">
+  <div class="w3-row-padding">
+    <div class="w3-col m6">
+      <h3>Nuestra Historia (1908 - Presente).</h3>
+      <p>Más de un siglo abriendo brecha en el comercio exterior mexicano. Desde nuestra fundación en 1908, en Pasquel Hermanos hemos sabido evolucionar a la par de las exigencias globales, consolidándonos como un pilar de confianza, solidez jurídica y excelencia operativa en cada despacho aduanal.</p>
+      <p><a href="#vacantes" class="w3-button w3-black"><i class="fa fa-briefcase"> </i> Únete a Nuestro Equipo</a></p>
+    </div>
+    <div class="w3-col m6">
+      <img class="w3-image w3-round-large" src="2.png" alt="Logística y Operación Aduanal" width="700" height="394">
+    </div>
+  </div>
+</div>
+
+<div class="w3-container" style="padding:128px 16px" id="team">
+  <h3 class="w3-center">EL EQUIPO</h3>
+  <p class="w3-center w3-large">Los profesionales que lideran esta compañía</p>
+  <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="4.png" alt="Team and Partners" style="width:100%">
+        <div class="w3-container">
+          <h3>John Doe</h3>
+          <p class="w3-opacity">CEO & Founder</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="4.png" alt="Team and Partners" style="width:100%">
+        <div class="w3-container">
+          <h3>Anja Doe</h3>
+          <p class="w3-opacity">Art Director</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="4.png" alt="Team and Partners" style="width:100%">
+        <div class="w3-container">
+          <h3>Mike Ross</h3>
+          <p class="w3-opacity">Web Designer</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="4.png" alt="Team and Partners" style="width:100%">
+        <div class="w3-container">
+          <h3>Dan Star</h3>
+          <p class="w3-opacity">Designer</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">14+</span>
+    <br>Partners
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">55+</span>
+    <br>Projects Done
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">89+</span>
+    <br>Happy Clients
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">150+</span>
+    <br>Meetings
+  </div>
+</div>
+
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<div class="w3-container" style="padding:128px 16px" id="vacantes">
+  <h3 class="w3-center">BOLSA DE TRABAJO</h3>
+  <p class="w3-center w3-large">Únete a nuestro equipo</p>
+
+  <!-- Contenedor limpio donde se cargarán las vacantes dinámicamente -->
+  <div class="w3-row-padding" style="margin-top:64px" id="contenedor-vacantes">
+    <!-- Se inyectan mediante app.js -->
+  </div>
+
+  <!-- PANEL DE ADMINISTRACIÓN (Se oculta por defecto y aparece solo para cuentas corporativas) -->
+  <div id="admin-panel-container" style="margin-top: 64px; display: none;" class="w3-card w3-white w3-padding-32">
+    <h4 class="w3-center" style="font-weight: bold;"><i class="fa fa-lock"></i> PANEL DE ADMINISTRACIÓN - PUBLICAR VACANTE</h4>
+    <form id="form-nueva-vacante" style="max-width: 600px; margin: auto; padding: 20px;">
+      <p><input class="w3-input w3-border" type="text" id="admin-titulo" placeholder="Título del Puesto" required></p>
+      <p><input class="w3-input w3-border" type="text" id="admin-ubicacion" placeholder="Ubicación" required></p>
+      <p><textarea class="w3-input w3-border" id="admin-descripcion" placeholder="Descripción del puesto..." rows="4" required></textarea></p>
+      <p class="w3-center">
+        <button class="w3-button w3-black" type="submit"><i class="fa fa-plus"></i> Publicar Vacante</button>
+      </p>
+    </form>
+  </div>
+</div>
+
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+  <h3 class="w3-center">CONTACTO</h3>
+  <p class="w3-center w3-large">Ponte en contacto con nosotros:</p>
+  <div style="margin-top:48px">
+    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> No. Bajos, Av. 611 16, San Juan de Aragón III Secc, Gustavo A. Madero, 07970 Ciudad de México, CDMX</p>
+    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Teléfono: +52 55 0000 0000</p>
+    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: jvillada@pasquelhermanos.com.mx</p>
+    <br>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-border" type="text" placeholder="Nombre" required name="Name"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Correo electrónico" required name="Email"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Asunto" required name="Subject"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Mensaje" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-black" type="submit">
+          <i class="fa fa-paper-plane"></i> ENVIAR MENSAJE
+        </button>
+      </p>
+    </form>
+    
+    <div style="margin-top:48px; width:100%; height:450px;">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.1819933661745!2d-99.06985198958895!3d19.44771868175911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fa266e4b61d7%3A0xd39b87eb16d044aa!2sPasquel%20Hermanos%20Aeropuerto%2C%20S.C.!5e0!3m2!1ses-419!2smx!4v1784760359520!5m2!1ses-419!2smx"
+        width="100%" 
+        height="100%" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</div>
+
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Volver arriba</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <p>Powered by Pasquel Hermanos</p>
+</footer>
+
+<!-- Modal de Postulación Profesional -->
+<div id="modal-postulacion" class="w3-modal" style="display:none;">
+  <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:500px; border-radius: 8px; overflow:hidden;">
+    <header class="w3-container w3-black" style="padding: 16px;">
+      <span onclick="cerrarModalPostulacion()" class="w3-button w3-display-topright w3-black" style="font-size: 20px;">&times;</span>
+      <h2 id="modal-titulo-puesto" style="font-size: 20px; margin: 0;">Postularme a la Vacante</h2>
+    </header>
+    <div class="w3-container" style="padding: 24px;">
+      <form id="form-postularse" onsubmit="enviarPostulacionForm(event)">
+        <input type="hidden" id="post-puesto">
+        
+        <label class="w3-text-dark-gray"><b>Nombre completo</b></label>
+        <input class="w3-input w3-border w3-margin-bottom" type="text" id="post-nombre" required placeholder="Ej. Juan Pérez">
+
+        <label class="w3-text-dark-gray"><b>Correo electrónico</b></label>
+        <input class="w3-input w3-border w3-margin-bottom" type="email" id="post-email" required placeholder="correo@ejemplo.com">
+
+        <label class="w3-text-dark-gray"><b>Teléfono de contacto</b></label>
+        <input class="w3-input w3-border w3-margin-bottom" type="tel" id="post-telefono" required placeholder="55 1234 5678">
+
+        <label class="w3-text-dark-gray"><b>Adjuntar CV (PDF / Word)</b></label>
+        <input class="w3-input w3-border w3-margin-bottom" type="file" id="post-cv" accept=".pdf,.doc,.docx" required>
+
+        <button type="submit" class="w3-button w3-black w3-block w3-section" style="padding: 12px; font-weight: bold;">Enviar Postulación</button>
+      </form>
+    </div>
+  </div>
+</div>
+ 
+<script>
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+
+// Script rápido en el HTML para verificar si hay sesión y cambiar el botón de Acceso o mostrar el panel
+document.addEventListener("DOMContentLoaded", () => {
+  const sesion = localStorage.getItem("usuario_sesion");
+  const btnAuthNav = document.getElementById("btn-auth-nav");
+  const panelAdmin = document.getElementById("admin-panel-container");
+
+  if (sesion) {
+    const user = JSON.parse(sesion);
+    if (btnAuthNav) {
+      btnAuthNav.innerHTML = `<i class="fa fa-user"></i> ${user.email} (SALIR)`;
+      btnAuthNav.href = "#";
+      btnAuthNav.style.backgroundColor = "#444";
+      btnAuthNav.onclick = () => {
+        if(confirm("¿Deseas cerrar sesión?")) {
+          localStorage.removeItem("usuario_sesion");
+          location.reload();
+        }
+      };
+    }
+    // Si es administrador por dominio corporativo, se muestra el panel debajo de vacantes
+    if (user.rol === "admin" && panelAdmin) {
+      panelAdmin.style.display = "block";
+    }
+  }
+
+  // Manejar el envío del formulario de nueva vacante desde el panel del admin
+  const formVacante = document.getElementById("form-nueva-vacante");
+  if (formVacante) {
+    formVacante.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const titulo = document.getElementById("admin-titulo").value;
+      const ubicacion = document.getElementById("admin-ubicacion").value;
+      const descripcion = document.getElementById("admin-descripcion").value;
+
+      // Aquí puedes conectar el fetch o dejarlo preparado para tu base de datos
+      alert("¡Vacante '" + titulo + "' lista para guardarse en la base de datos!");
+      formVacante.reset();
+    });
+  }
+});
+</script>
+<script>
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+<!-- Toda la lógica funcional vive en app.js -->
+<script src="app.js"></script>
+
+</body>
+</html>
