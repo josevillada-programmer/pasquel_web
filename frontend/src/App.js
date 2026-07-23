@@ -17,7 +17,7 @@ function cargarVacantes() {
   const contenedor = document.getElementById("contenedor-vacantes");
   if (!contenedor) return;
 
-  fetch('/api/vacantes')
+  fetch('https://pasquel-web.onrender.com/api/vacantes')
     .then(res => res.json())
     .then(data => {
       if (!data || data.length === 0) {
@@ -56,7 +56,7 @@ function publicarVacanteEnBD() {
   }
 
   // Petición POST hacia tu API de Node.js
-  fetch('/api/vacantes', {
+  fetch('https://pasquel-web.onrender.com/api/vacantes', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ 

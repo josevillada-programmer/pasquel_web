@@ -17,7 +17,7 @@ function cargarVacantes() {
   const contenedor = document.getElementById("contenedor-vacantes");
   if (!contenedor) return;
 
-  fetch('http://localhost:3000/api/vacantes')
+  fetch('https://pasquel-web.onrender.com/api/vacantes')
     .then(res => res.json())
     .then(data => {
       if (!data || data.length === 0) {
@@ -56,7 +56,7 @@ function publicarVacanteEnBD() {
   }
 
   // Petición POST hacia tu API de Node.js con la URL completa
-  fetch('http://localhost:3000/api/vacantes', {
+  fetch('https://pasquel-web.onrender.com/api/vacantes', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ 
@@ -146,7 +146,7 @@ function enviarPostulacionForm(e) {
   formDataBD.append('telefono', telefono);
   formDataBD.append('cv', file);
 
-  fetch('http://localhost:3000/api/postulaciones', {
+  fetch('https://pasquel-web.onrender.com/api/postulaciones', {
     method: 'POST',
     body: formDataBD
   })

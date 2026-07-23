@@ -5,7 +5,7 @@ require('dotenv').config({ path: '../.env' });
 // 1. Inicializar app primero
 const app = express();
 
-const db = require('./config/db');
+const db = require('./config/db.js');
 const adminRoutes = require('./routes/adminRoutes');
 const vacantesRoutes = require('./routes/vacantesRoutes');
 const postulacionesRoutes = require('./routes/postulacionesRoutes');

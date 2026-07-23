@@ -69,7 +69,7 @@ body, html {
 <script>
 // Función que maneja la respuesta segura de Google al registrarse
 function handleCredentialResponse(response) {
-  fetch('http://localhost:3000/api/admin/google-login', {
+  fetch('https://pasquel-web.onrender.com/api/admin/google-login', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ token: response.credential })

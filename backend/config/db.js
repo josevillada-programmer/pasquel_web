@@ -18,3 +18,4 @@ async function probarConexion() {
   } catch (error) {
     console.error('Error al conectar con la base de datos de Docker:', error.message);
   }
+}
